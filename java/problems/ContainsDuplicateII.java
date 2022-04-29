@@ -16,15 +16,12 @@ class Solution {
                 for(int i=0; i<n-1; i++){
                     for(int j=i+1; j<n; j++){
                         if(k >= Integer.parseInt(arr[j]) - Integer.parseInt(arr[i])) {
-                            result = true;
-                            break;
+                            return true;
                         }
                     }
                 }
-            } else {
-                continue;
             }
         }
-        return result;
+        return false;
     }
 }
